@@ -27,7 +27,7 @@ CELERYBEAT_SCHEDULE = {
     },
     'multiply-at-some-time': {
         'task': 'celery_app.task3.crawl1',
-        'schedule': crontab(hour=16, minute=16),   # 每天早上 9 点 50 分执行一次
+        'schedule': crontab(hour=11, minute=52),   # 每天早上 9 点 50 分执行一次
         'args': ()                            # 任务函数参数
     }
 }
