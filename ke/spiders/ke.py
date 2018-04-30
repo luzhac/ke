@@ -14,9 +14,9 @@ class KeSpider(Spider):
 
     def __init__(self, arg=None):
         if arg is None:
-            self.arg = 0
+            self.arg = int(0)
         else:
-            self.arg = arg
+            self.arg = int(arg)
 
     def start_requests(self):
         url='https://ke.qq.com/course/list?'
