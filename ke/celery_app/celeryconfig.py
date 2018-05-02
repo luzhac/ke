@@ -15,19 +15,10 @@ CELERY_IMPORTS = (
 )
 # schedules
 CELERYBEAT_SCHEDULE = {
-    'add-every-30-seconds': {
-         'task': 'celery_app.task1.add',
-         'schedule': timedelta(seconds=30),       # 每 30 秒执行一次
-         'args': (5, 8)                           # 任务函数参数
-    },
-    'multiply-at-some-time': {
-        'task': 'celery_app.task2.multiply',
-        'schedule': crontab(hour=9, minute=50),   # 每天早上 9 点 50 分执行一次
-        'args': (3, 7)                            # 任务函数参数
-    },
+
     'multiply-at-some-time': {
         'task': 'celery_app.task3.crawl1',
-        'schedule': crontab(hour=11, minute=52),   # 每天早上 9 点 50 分执行一次
+        'schedule': crontab(hour=11, minute=10),    
         'args': ()                            # 任务函数参数
     }
 }
