@@ -44,10 +44,13 @@ DEFAULT_REQUEST_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
     'authorization': 'oauth c3cef7c66a1843f8b3a9e6a1e3160e20',
 }
+
+
+
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'keqq.middlewares.KeqqSpiderMiddleware': 543,
+#    'ke.middlewares.KeqqSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
@@ -56,11 +59,14 @@ DEFAULT_REQUEST_HEADERS = {
 #    'keqq.middlewares.KeqqDownloaderMiddleware': 543,
 #}
 
+MYEXT_ENABLED=True
+
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
+EXTENSIONS = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
-#}
+    'ke.extentions.SpiderOpenCloseLogging': 100,
+}
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
