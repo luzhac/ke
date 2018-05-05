@@ -19,3 +19,4 @@ def crawl1():
 
     os.system("scrapy crawl ke -a arg="+str(a))
     os.system("scrapy crawl study163 -a arg="+str(a))
+    os.system("scrapy crawl tianshan -a arg=" + str(a))
